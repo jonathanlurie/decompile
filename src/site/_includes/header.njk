@@ -1,0 +1,16 @@
+<header>
+  <ul class="nav">
+    <li>
+      <a href="/">home</a>
+    </li>
+    <li>
+      <a href="/about">about</a>
+    </li>
+  </ul>
+  <div class="header-social">
+    <a href="https://twitter.com/jonathanlurie"><img src="/images/twitter-logo.svg"/></a>
+    <a href="https://github.com/jonathanlurie"><img src="/images/github-logo.svg"/></a>
+  </div>
+  <h1>{{ title }}</h1>
+  {%- if subtitle %}<p class="subtitle">{{ subtitle | safe }}</p>{% endif %}
+</header>
