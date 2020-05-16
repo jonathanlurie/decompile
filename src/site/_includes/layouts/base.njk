@@ -3,22 +3,27 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Facebook meta -->
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:description" content="{{excerpt}}">
+    <meta property="og:image" content="{{ site.rootUrl}}{{cover}}">
+
+    <!-- Twitter meta -->
+    <meta name="twitter:title" content="{{title}}">
+    <meta name="twitter:description" content="{{excerpt}}">
+    <meta name="twitter:image" content="{{site.rootUrl}}{{cover}}">
+    <meta name="twitter:card" content="summary_large_image"> 
+
     <link rel="stylesheet" href="/css/styles.css">
     <title>{{ title }}</title>
   </head>
   <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
-
     <div class="container">
-      {% include "header.njk" %}
+      {% include "header.njk" %} 
       {{ content | safe }}
       {% include "footer.njk" %}
     </div>
-
-    {% set js %}
-      {% include "js/core.js" %}
-      {% include "js/hello.js" %}
-    {% endset %}
-    <script>{{ js | jsmin | safe }}</script>
 
   </body>
 </html>

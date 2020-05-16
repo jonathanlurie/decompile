@@ -168,11 +168,13 @@ main {
 
 main img {
   max-width: 100%;
+  box-shadow: 0px 15px 49px 0px rgba(0,0,0,0.3);
 }
 
 pre {
   overflow: auto;
   border-radius: 2px;
+  box-shadow: 0px 15px 49px 0px rgba(0,0,0,0.3);
   code {
     border-style: none;
     padding-top: 0;
@@ -213,9 +215,20 @@ footer {
 
 .listing .post .cover {
   width: 100%;
-  padding-top: 40%;
   position: relative;
-  border-top: 1px solid #3dade1;
+  border-top: 1px solid;
+  border-top-color: mix($text-color, $accent-color, 40%);
+
+  @media (min-width: $narrow) {
+    padding-top: 50%;
+  };
+
+  @media (min-width: $mid) {
+    padding-top: 50%;
+  };
+  @media (min-width: $wide) {
+    padding-top: 40%;
+  };
 }
 
 .listing .post .post-link {
@@ -240,11 +253,15 @@ footer {
   width: -moz-available;
   width: -webkit-fill-available;
   width: fill-available;
-
   height: 100%;
   height: -moz-available;
   height: -webkit-fill-available;
   height: fill-available;
+  transition: all 0.3s;
+}
+
+.listing .post .post-container:hover {
+  background: #00000027;
 }
 
 .listing .post time {

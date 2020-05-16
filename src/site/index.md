@@ -1,5 +1,5 @@
 ---
-title: Decompile
+title: Bits
 subtitle: Hi, I am Jonathan Lurie. </br>I write code and and I learn new things in the process. Now let's share!
 layout: layouts/base.njk
 ---
